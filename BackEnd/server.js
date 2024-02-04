@@ -22,6 +22,10 @@ connection.once("open", () => {
   console.log('MongoDB Connection Success!!!')
 })
 
+const todoRouter = require("./routes/todo.js");
+
+app.use("/todo", todoRouter);
+
 app.listen(PORT, () => {
   console.log(`Server is up and running at port ${PORT}`)
 })
